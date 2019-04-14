@@ -1,0 +1,25 @@
+java中一些IO知识点，之前一直老忘记
+File 类
+方法 1. getAbsolutePath(); //获取绝对路径
+    2.exit(); //判断文件是否存在
+ 3. isDirectory(); //判断该文件是否是一个文件夹
+4. isFile();  //判断是否是文件
+5. length();//得到文件长度
+6. long time = f.lastModefied();//文件最后修改时间
+
+方法2：
+File f = new File("")
+f.list(); //以字符串数组形式返回当前文件夹下所有文件，不包含子文件
+File[] fs = f.listFile(); //以文件数组方式，返回当前文件夹下所有文件--不包含子文件
+
+String str = f.getParent(); //以字符串形式返回所在文件夹
+File fparent = f.getParentFile(); //返回所在文件夹
+f.mkdir(); //创建文件夹 --- 这个是在当前文件目录下创建还是在f下创建呢？
+f.mkdirs(); //创建文件夹，如果副文件夹不在，则创建一个
+
+f.createNewFile(); //创建一个空文件，如果副文件夹不再，则创建副文件夹
+
+f.listRoots(); // 列出c: d： E:
+
+f.delete();//删除文件
+
