@@ -1,0 +1,98 @@
+前锋教育linux16天：
+1.^c 结束终止命令   ^d 删除  ^L 清屏 ^e ^a 移动光标到结尾和开头
+^r 可以查看历史
+
+
+ESC. 把上一句命令最后拿过来
+!搜索 历史命令
+！$ 上一条命令的参数
+
+^r 与 ！字符串的异同：
+1.都是搜索
+2.前者搜索历史 后者是以字符串为前缀ll
+
+
+linux目录结构
+ls /
+bin ： 普通用户使用的命令
+sbin： 管理员使用的命令
+boot
+dev： 设备
+etc
+home
+root： root用户的home
+proc： 虚拟的文件系统，反映出来的是内和，进程信息或实时状态
+run
+sbin
+tmp 
+usr
+
+
+
+~ ：表示家名录
+
+
+1.linux文件管理
+==创建
+文件
+touch file{1..20}
+目录
+mkdir
+
+==移动mv
+
+
+==删除rm
+rm -rf *.txt//删除.txt文件
+使用相对路径删除
+
+*不包含隐藏文件
+
+
+
+2.文集管理--查看文件
+cat
+less
+head
+tail
+
+
+grep 针对文件内容进行过滤
+grep 'root' 
+grep '^root' root开头
+grep 'root$' root结尾
+
+
+a 光标定位
+0 $
+/^root 以root开头
+gg G
+/string   n N 可以循环  快速定位某一行
+/txt$ 
+
+b 文本编辑
+  y  复制
+  d 删除 
+  p 粘贴
+
+
+插入模式
+^p
+
+可视化模式
+快插入    选择块 I  插入字符 esc
+块题换    。。 r  输入替换字符
+删除     r d| x
+复制   。。 y
+
+
+ u undo 撤销
+^r redo
+
+
+
+
+day3用户组管理
+4/14
+
+ 
