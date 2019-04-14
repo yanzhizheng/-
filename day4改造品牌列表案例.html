@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 如果要使用組件， 直接把組件的名稱 以html 標題形式-->
+        <my-com1></myc-om1>
+        <my-Com2></my-Com2>
+    </div>
+
+    <script>
+
+        // 1.1 使用Vue.extend 来创建全局的Vue组件
+
+            var com1 = Vue.extend({
+                template:'<h3>我是一个h3</h3>'
+            })
+        // 1.2 使用Vue.component('组件名称'，'创建出来的模板')
+        // 用駝峰則要使用－　　不用驼峰　则直接拿名称
+        // vue.component的第一个参数是创建爱你组件的名称 第二个是一个对象
+            Vue.component('myCom1',com1)
+        
+
+            Vue.component('myCom2',{
+                // 不论那种方式创建出来的组件，template中根元素只能有一个
+                template:'<h3>这是一个h3</h3>'
+            })
+        var vm = new Vue({
+            el:"#app",
+            data:{},
+            methods:{}
+
+        })
+
+
+    </script>
+</body>
+</html>
